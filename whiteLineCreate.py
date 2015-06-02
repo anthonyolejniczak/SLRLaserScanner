@@ -2,10 +2,11 @@
 cutoff = 100
 
 from PIL import Image
-im = Image.open("../135.jpg")
+im = Image.open("TestImages/135.tiff")
 print im.format, im.size, im.mode
 width, height = im.size
 px = im.load()
+#putpixel = px.putpixel
 for i in range(height):
 	startRed = 0
 	endRed = 0
@@ -25,7 +26,7 @@ for i in range(height):
 #		print str(i) + " has ONE red pixel above the threshold."
 		for k in range(width):
 			if k == startRed:
-				px[k,i] = (255,0,0,0)
+				px[k,i] = (100,100,0)
 			else:
 				px[k,i] = (0,0,0)
 	if startRed > 0 and endRed > 0:
@@ -34,7 +35,8 @@ for i in range(height):
 #		print str(startRed) + "," + str(endRed) + " - Mean: " + str(mean)
 		for k in range(width):
 			if k == mean:
-                                px[k,i] = (255,0,0,0)
-                        else:
-                                px[k,i] = (0,0,0)
-im.save("/Users/aolejniczak/Desktop/outfile2.jpg", "JPEG")
+				px[k,i] = (100,100,0)
+				print str(k) + "," + str(i) + " | " + str(px[k,i])
+			else:
+                               px[k,i] = (0,0,0)
+im.save("TestImages/outfile.png", "PNG")
