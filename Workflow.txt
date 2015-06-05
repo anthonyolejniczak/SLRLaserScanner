@@ -1,0 +1,8 @@
+1. Take images.
+2. Run images through script to create single pixel per row.
+3. Run script to determine the axis of rotation.
+4. Run script to:
+	a. Create x,y,z point cloud for each image.
+	b. Rotate the x,y,z points for that image per the image angle.
+	c. 
+5. run script to rotate

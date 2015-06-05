@@ -1,13 +1,13 @@
 from PIL import Image
 import os
 
-dirlist = os.listdir("/Users/aolejniczak/Desktop/SLRLaserScanner/TestImages/Results/")
+dirlist = os.listdir("/Users/aolejniczak/Desktop/SLRLaserScanner/TestImages/FullShallotResults/")
 for files in dirlist:
 	sum = 0
 	count = 0
 	if files == "CenterCalibration.png":
 		print "Now processing: " + files
-		fileToOpen = "/Users/aolejniczak/Desktop/SLRLaserScanner/TestImages/Results/" + files
+		fileToOpen = "/Users/aolejniczak/Desktop/SLRLaserScanner/TestImages/FullShallotResults/" + files
 		im = Image.open(fileToOpen)
 		print im.format, im.size, im.mode
 		width, height = im.size
