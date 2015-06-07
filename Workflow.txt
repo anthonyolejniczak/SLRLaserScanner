@@ -4,5 +4,8 @@
 4. Run script to:
 	a. Create x,y,z point cloud for each image.
 	b. Rotate the x,y,z points for that image per the image angle.
-	c. 
-5. run script to rotate
+	c. write the rotated points to a text file.
+
+*5. Mesh the points and output the mesh.
+
+*6. Review all steps and find a way to calibrate them for measurement.
