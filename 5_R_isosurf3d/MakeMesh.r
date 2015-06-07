@@ -1,5 +1,5 @@
 require(akima) ; require(rgl) ; require(scatterplot3d) ; require(animation) ; require(plot3D)
-fpe = read.table("/Users/aolejniczak/Desktop/Points.txt", col.names=c("xcol","ycol","zcol"))
+fpe = read.table("SubsampledTiny.xyz", col.names=c("xcol","ycol","zcol"))
 x <- as.vector(fpe$xcol)
 y <- as.vector(fpe$ycol)
 z <- as.vector(fpe$zcol)
